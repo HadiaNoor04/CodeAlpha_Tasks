@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+</div>
+
+<div class="gallery" id="gallery">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80" class="nature">
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&auto=format&fit=crop&q=80" class="city">
+    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&auto=format&fit=crop&q=80" class="nature">
+    <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=600&auto=format&fit=crop&q=80" class="city">
+</div>
+
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<!-- JS FILE -->
+<script src="script.js"></script>
+
+</body>
+</html>
